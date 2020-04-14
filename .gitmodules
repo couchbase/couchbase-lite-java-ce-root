@@ -1,0 +1,12 @@
+[submodule "ce"]
+	path = ce
+	url = https://github.com/couchbase/couchbase-lite-java-ce
+[submodule "common"]
+	path = common
+	url = https://github.com/couchbase/couchbase-lite-java-common
+[submodule "core"]
+	path = core
+	url = git://github.com/couchbase/couchbase-lite-core
+[submodule "legal"]
+	path = legal
+	url = git://github.com/couchbase/product-texts
