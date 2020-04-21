@@ -1,16 +1,21 @@
 
-# Couchbase Lite Common Java Code
+# Couchbase Lite Community Edition
 
-This repo contains code common to all Couchbase Lite Java Products
+This repo contains the code for the community editions of the Java-language family of products
+for Couchbase Lite 2.0.  This includs the Java AppServer and Android products.
+Couchbase Lite 2.0 is a completely new product, utterly divergent from the 1.0 version
+
+It is a git repository with submodules.  To check it out, clone this root repository:
+
+git clone https://github.com/couchbase/couchbase-lite-android-ce-root --recurse-submodules
+
+## Organization
+
+There are two important top level directories
 
 ## Issues
 
-Please file any issues against the appropriate product root:
+Please file any issues for either the Java AppServer or the Android product, here.  Be sure to specify which you are using
 
-- For the Android product, use couchbase-lite-android-ce [here](https://github.com/couchbase/couchbase-lite-android-ce)
-- For the pure Java product, use couchbase-lite-java-ce (TBD)
-
-It is a completely new implementation, utterly divergent from
-the 1.x project that formerly occupied this space.
 
 
