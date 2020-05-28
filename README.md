@@ -27,11 +27,11 @@ See: [Todo](https://github.com/couchbaselabs/mobile-training-todo/tree/feature/2
 
 This project is a git repository with submodules.  To check it out, clone this root repository:
 
-`git clone https://github.com/couchbase/couchbase-lite-android-ce-root --recurse-submodules`
+`git clone https://github.com/couchbase/couchbase-lite-java-ce-root --recurse-submodules`
 
 or
 
-`git clone https://github.com/couchbase/couchbase-lite-android-ce-root`
+`git clone https://github.com/couchbase/couchbase-lite-java-ce-root`
 `git submodule update --init --recursive`
 
 ## Organization
