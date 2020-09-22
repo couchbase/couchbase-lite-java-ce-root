@@ -1,15 +1,15 @@
 
-# Couchbase Lite Community Edition 2.0
+# Couchbase Lite Community Edition 2.0+
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 **Couchbase Lite** is an embedded lightweight, document-oriented (NoSQL), syncable database engine.
 
-Couchbase Lite 2.0 has a completely new set of APIs. The implementation is on top of [Couchbase Lite Core](https://github.com/couchbase/couchbase-lite-core), which is also a new cross-platform implementation of database CRUD and query features, as well as document versioning.
+Couchbase Lite 2.0+ has a completely new set of APIs. The implementation is on top of [Couchbase Lite Core](https://github.com/couchbase/couchbase-lite-core), which is also a new cross-platform implementation of database CRUD and query features, as well as document versioning.
 
 This repo contains the code for the community editions of the Java-language family of products
-for Couchbase Lite 2.0.  This includs the Java AppServer and Android products.
-Couchbase Lite 2.0 is a completely new product, utterly divergent from the 1.0 version
+for Couchbase Lite 2.0+.  This includs the Java AppServer and Android products.
+Couchbase Lite 2.0+ is a completely new product, utterly divergent from the 1.0 version
 
 ## Issues
 
@@ -17,11 +17,11 @@ Please file any issues for either the Java AppServer or the Android product, her
 
 ## Documentation
 
-See: [Developer Guide](https://developer.couchbase.com/documentation/mobile/2.0/couchbase-lite/java.html)
+See: Developer Guide [Android](https://docs.couchbase.com/couchbase-lite/2.7/java-android.html), [Java](https://docs.couchbase.com/couchbase-lite/2.7/java-platform.html)
 
 ## Sample Apps
 
-See: [Todo](https://github.com/couchbaselabs/mobile-training-todo/tree/feature/2.0)
+See: Todo [Android](https://github.com/couchbaselabs/mobile-training-todo/tree/release/mercury/android), [Java Desktop](https://github.com/couchbaselabs/mobile-training-todo/tree/release/mercury/java-desktop), [Java Web Service](https://github.com/couchbaselabs/mobile-training-todo/tree/release/mercury/java-ws)
 
 ## Downloading
 
