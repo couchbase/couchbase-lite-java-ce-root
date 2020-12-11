@@ -17,7 +17,7 @@ Please file any issues for either the Java AppServer or the Android product, her
 
 ## Documentation
 
-See: Developer Guide [Android](https://docs.couchbase.com/couchbase-lite/2.7/java-android.html), [Java](https://docs.couchbase.com/couchbase-lite/2.7/java-platform.html)
+See: Developer Guide [Android](https://docs.couchbase.com/couchbase-lite/current/android/quickstart.html), [Java](https://docs.couchbase.com/couchbase-lite/current/java/quickstart.html)
 
 ## Sample Apps
 
