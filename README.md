@@ -52,6 +52,11 @@ Note: the top level gradle build will build both products, but only if both are 
 * local.properties files in this and both product directories
 * a LiteCore binary in `./common/lite-core/`
 
+## Using the Library
+
+If you minify (Proguard) an application that uses CouchbaseLite you will need to add a few rules to your
+Proguard configuration.  The rules are listed [here](https://docs.couchbase.com/couchbase-lite/2.7/java-android.html#ruleset)
+
 ## License
 
 Apache 2 [license](LICENSE).
