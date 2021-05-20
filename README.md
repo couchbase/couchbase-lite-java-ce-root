@@ -17,7 +17,7 @@ Please file any issues for either the Java AppServer or the Android product, her
 
 ## Documentation
 
-See: Developer Guide [Android](https://docs.couchbase.com/couchbase-lite/current/android/quickstart.html), [Java](https://docs.couchbase.com/couchbase-lite/current/java/quickstart.html)
+See: Developer Guide [Android](https://docs.couchbase.com/couchbase-lite/2.7/java-android.html), [Java](https://docs.couchbase.com/couchbase-lite/2.7/java-platform.html)
 
 ## Sample Apps
 
@@ -51,6 +51,11 @@ Note: the top level gradle build will build both products, but only if both are 
 
 * local.properties files in this and both product directories
 * a LiteCore binary in `./common/lite-core/`
+
+## Using the Library
+
+If you minify (Proguard) an application that uses CouchbaseLite you will need to add a few rules to your
+Proguard configuration.  The rules are listed [here](https://docs.couchbase.com/couchbase-lite/2.7/java-android.html#ruleset)
 
 ## License
 
