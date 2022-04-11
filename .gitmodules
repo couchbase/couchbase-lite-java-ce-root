@@ -6,4 +6,4 @@
 	url = https://github.com/couchbase/couchbase-lite-java-common
 [submodule "core"]
 	path = core
-	url = git://github.com/couchbase/couchbase-lite-core
+	url = https://github.com/couchbase/couchbase-lite-core
