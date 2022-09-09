@@ -1,16 +1,15 @@
 #!/bin/sh
 # Use this script to install the Couchbase Lite Core library necessary to build
 # the Java/Kotlin language variants of the Couchbase Lite Platform.
+# You may use it to install multiple os/ABI variants
 #
 # To use the script, run it from the root of a clone of the couchbase-lite-java-ce-root repository,
 # supplying:
-#   1) The ABI for the LiteCore library being installed.  Supported ABIs are:
-#      linux/x86_64, macos/x86_64, windows/x86_64, android/arm64-v8a,
-#      android/armeabi-v7a, android/x86, android/x86_64
+#   1) The OS/ABI for the LiteCore library being installed.  Supported combinations are:
+#      linux/x86_64, macos/x86_64, windows/x86_64, android/arm64-v8a, android/armeabi-v7a, android/x86, android/x86_64
 #   2) The path to the root of a clone of the couchbase-lite-core repository
 #   3) The path to the loadable LiteCore library.  Instructions for building the
 #      LiteCore library can be found in its repository, https://github.com/couchbase/couchbase-lite-core
-
 
 function usage() {
    echo "Usage: $0 <abi> <core root> <liteCore bin path>"
@@ -29,7 +28,7 @@ case $ABI in
    linux/x86_64 | macos/x86_64 | windows/x86_64 | android/arm64-v8a | android/armeabi-v7a | android/x86 | android/x86_64)
       ;;
    *)
-      echo "The first argument to this script  must be and abi from:"
+      echo "The first argument to this script  must be an os/abi pair from:"
       echo "   linux/x86_64, macos/x86_64, windows/x86_64, android/arm64-v8a, android/armeabi-v7a, android/x86, android/x86_64"
       exit 1
       ;;
@@ -45,15 +44,17 @@ fi
 LIB="$3"
 if [ -z "${LIB}" ]; then usage; fi
 if [ ! -f "${LIB}" ]; then
-   echo "The third argument to this script must be the path to the LiteCore library"
+   echo "The third argument to this script must be the path to a LiteCore library, built from the couchbase-lite-core repository"
    exit 1
 fi
 
-mkdir -p "common/lite-core/${ABI}"/
+rm -rf "common/lite-core/${ABI}"/
 
-mkdir "common/lite-core/${ABI}/include"
-cp -a "${CORE}/C/include/"*.h "${CORE}/C/Cpp_include/"*.hh "${CORE}/vendor/fleece/API/fleece" "common/lite-core/${ABI}/include"
+mkdir -p "common/lite-core/${ABI}/include"
+cp "${CORE}/C/include/"*.h "${CORE}/C/Cpp_include/"*.hh "common/lite-core/${ABI}/include"
+mkdir -p "common/lite-core/${ABI}/include/fleece"
+cp "${CORE}/vendor/fleece/API/fleece/"*.h "${CORE}/vendor/fleece/API/fleece/"*.hh "common/lite-core/${ABI}/include/fleece"
 
-mkdir "common/lite-core/${ABI}/lib"
+mkdir -p "common/lite-core/${ABI}/lib"
 cp "${LIB}" "common/lite-core/${ABI}/lib"
 
