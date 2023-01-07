@@ -16,7 +16,7 @@
 //
 buildscript {
     ext {
-        KOTLIN_VERSION = '1.7.10'
+        KOTLIN_VERSION = '1.7.20'
         PROPS_FILE = "${projectDir}/local.properties"
      }
 
@@ -29,8 +29,9 @@ buildscript {
     // Android has to be here or gradle thows a fit.
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
-        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath 'com.android.tools.build:gradle:7.3.1'
     }
 }
 
 task clean(type: Delete) { delete rootProject.buildDir }
+
