@@ -28,3 +28,6 @@ local.properties
 # Keystore files
 *.jks
 
+# LiteCore build
+litecore
+
