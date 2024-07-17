@@ -1,12 +1,10 @@
 //
-// build.gradle
-//
 // Copyright (c) 2018 Couchbase, Inc.  All rights reserved.
 //
 // Licensed under the Couchbase License Agreement (the "License");
 // you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// https://info.couchbase.com/rs/302-GJY-034/images/2017-10-30_License_Agreement.pdf
+// You may review the License at
+// https://www.couchbase.com/enterprise-terms
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,8 +14,8 @@
 //
 buildscript {
     ext {
-        KOTLIN_VERSION = '1.7.20'
-        PROPS_FILE = "${projectDir}/local.properties"
+        KOTLIN_VERSION = '1.9.24'
+        JACOCO_VERSION = '0.8.10'
      }
 
     repositories {
@@ -28,10 +26,8 @@ buildscript {
     // Kotlin has to be here or its plugin throws a fit
     // Android has to be here or gradle thows a fit.
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
+        classpath 'com.android.tools.build:gradle:8.4.0'
     }
 }
-
-task clean(type: Delete) { delete rootProject.buildDir }
 
