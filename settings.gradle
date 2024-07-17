@@ -18,10 +18,10 @@ def module = "lib"
 // use the test application, instead, if testing
 if (hasProperty("automatedTests") && automatedTests.toBoolean()) { module = 'test' }
 
-include "ce:android:${module}", "ee:android:${module}", "ce:android-ktx:${module}", "ee:android-ktx:${module}", "ce:java:${module}", "ee:java:${module}"
+include "ce:android:lib", "ee:android:lib", "ce:android-ktx:${module}", "ee:android-ktx:${module}", "ce:java:${module}", "ee:java:${module}"
 
-project(":ee:android:${module}").name = "ee_android"
-project(":ce:android:${module}").name = "ce_android"
+project(":ee:android:lib").name = "ee_android"
+project(":ce:android:lib").name = "ce_android"
 project(":ee:android-ktx:${module}").name = "ee_android-ktx"
 project(":ce:android-ktx:${module}").name = "ce_android-ktx"
 project(":ee:java:${module}").name = "ee_java"

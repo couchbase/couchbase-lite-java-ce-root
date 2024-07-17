@@ -19,5 +19,5 @@
     static <methods>;
     <fields>;
     <init>(...);
- }
+}
 
