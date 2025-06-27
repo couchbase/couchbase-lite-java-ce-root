@@ -16,8 +16,11 @@
 //
 buildscript {
     ext {
-        KOTLIN_VERSION = '1.7.20'
-        PROPS_FILE = "${projectDir}/local.properties"
+        KOTLIN_VERSION = '1.9.10'
+        CHECKSTYLE_VERSION = "8.42"
+        PMD_VERSION = '6.55.0'
+        SPOTBUGS_VERSION = '4.7.3'
+        JACOCO_VERSION = '0.8.10'
      }
 
     repositories {
@@ -29,7 +32,7 @@ buildscript {
     // Android has to be here or gradle thows a fit.
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$KOTLIN_VERSION"
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:8.4.2'
     }
 }
 
