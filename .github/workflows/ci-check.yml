@@ -1,0 +1,21 @@
+name: CI Check
+
+on:
+  pull_request:
+    branches:
+      - master
+      - '**/release/**'
+
+jobs:
+  ci-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+      - name: Run ciCheck
+        run: ./gradlew ciCheck
+        working-directory: android
