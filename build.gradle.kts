@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2018 Couchbase, Inc.  All rights reserved.
+// Copyright (c) 2026 Couchbase, Inc.  All rights reserved.
 //
 // Licensed under the Couchbase License Agreement (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,22 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-buildscript {
-    ext {
-        KOTLIN_VERSION = '1.9.24'
-        JACOCO_VERSION = '0.8.10'
-     }
 
-    repositories {
-        google()
-        mavenCentral()
-    }
+// Plugin versions and dependency versions are centralized in gradle/libs.versions.toml.
+// Plugin resolution is configured via pluginManagement in settings.gradle.kts.
 
-    // Kotlin has to be here or its plugin throws a fit
-    // Android has to be here or gradle thows a fit.
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}"
-        classpath 'com.android.tools.build:gradle:8.4.0'
-    }
+tasks.register("devPublish") {
+    dependsOn(
+        ":ce:android:ce_android:devPublish",
+        ":ce:android-ktx:ce_android-ktx:devPublish",
+        ":ce:java:ce_java:devPublish"
+    )
 }
-

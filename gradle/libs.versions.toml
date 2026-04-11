@@ -1,0 +1,43 @@
+# This file will leave here and in the EE root, please keep them in sync
+
+[versions]
+compileSdk = "36"
+minSdk = "24"
+buildTools = "36.0.0"
+ndk = "27.2.12479018"
+cmake = "3.30.5"
+kotlin = "2.3.20"
+agp = "9.1.0"
+spotbugsPlugin = "6.4.8"
+okhttp = "4.12.0"
+checkstyle = "8.42"
+sevntu = "1.44.1"
+pmd = "6.55.0"
+spotbugs = "4.9.8"
+androidxAnnotation = "1.10.0"
+junit = "4.13.2"
+androidxTest = "1.7.0"
+dokka = "1.9.20"
+coroutines = "1.8.0"
+work = "2.8.1"
+
+[libraries]
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+spotbugs-annotations = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotbugs" }
+androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "androidxAnnotation" }
+junit = { module = "junit:junit", version.ref = "junit" }
+androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTest" }
+androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTest" }
+androidx-test-rules = { module = "androidx.test:rules", version.ref = "androidxTest" }
+sevntu = { module = "com.github.sevntu-checkstyle:sevntu-checks", version.ref = "sevntu" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "work" }
+androidx-work-testing = { module = "androidx.work:work-testing", version.ref = "work" }
+
+[plugins]
+android-library = { id = "com.android.library", version.ref = "agp" }
+spotbugs = { id = "com.github.spotbugs-base", version.ref = "spotbugsPlugin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }

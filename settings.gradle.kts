@@ -1,5 +1,13 @@
+pluginManagement {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
 // This project contains two distinct applications:
-// 1) the CBL-Android-EE source and the code to build, unit-test and publish it to maven
+// 1) the CBL-Android-CE source and the code to build, unit-test and publish it to maven
 // 2) an independent application that runs automated tests on the application build in #1
 //
 // The two apps are mutually exclusive: the test app is built and run only by CI machines
@@ -12,18 +20,10 @@
 // for the test projects in sync
 //
 
-// normal source development
-def module = "lib"
+val module = if (providers.gradleProperty("automatedTests").map { it.toBoolean() }.getOrElse(false)) "test" else "lib"
 
-// use the test application, instead, if testing
-if (hasProperty("automatedTests") && automatedTests.toBoolean()) { module = 'test' }
+include("ce:android:lib", "ce:android-ktx:$module", "ce:java:$module")
 
-include "ce:android:lib", "ee:android:lib", "ce:android-ktx:${module}", "ee:android-ktx:${module}", "ce:java:${module}", "ee:java:${module}"
-
-project(":ee:android:lib").name = "ee_android"
 project(":ce:android:lib").name = "ce_android"
-project(":ee:android-ktx:${module}").name = "ee_android-ktx"
-project(":ce:android-ktx:${module}").name = "ce_android-ktx"
-project(":ee:java:${module}").name = "ee_java"
-project(":ce:java:${module}").name = "ce_java"
-
+project(":ce:android-ktx:$module").name = "ce_android-ktx"
+project(":ce:java:$module").name = "ce_java"
