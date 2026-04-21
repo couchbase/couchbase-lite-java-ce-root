@@ -3,8 +3,8 @@
 [versions]
 compileSdk = "36"
 minSdk = "24"
-buildTools = "36.0.0"
-ndk = "27.2.12479018"
+buildTools = "37.0.0"
+ndk = "27.3.13750724"
 cmake = "3.30.5"
 kotlin = "2.3.20"
 agp = "9.1.0"
