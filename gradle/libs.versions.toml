@@ -1,20 +1,21 @@
 # This file will leave here and in the EE root, please keep them in sync
 
 [versions]
-compileSdk = "36"
+compileSdk = "34" # Don't bump this until we can support higher AGP
+jacoco = "0.8.10"
 minSdk = "24"
-buildTools = "37.0.0"
+buildTools = "34.0.0"
 ndk = "27.3.13750724"
 cmake = "3.30.5"
-kotlin = "2.3.20"
-agp = "9.1.0"
+kotlin = "1.9.24"
+agp = "8.4.2" # Don't bump this until we can support higher Kotlin
 spotbugsPlugin = "6.4.8"
 okhttp = "4.12.0"
 checkstyle = "8.42"
 sevntu = "1.44.1"
 pmd = "6.55.0"
 spotbugs = "4.9.8"
-androidxAnnotation = "1.10.0"
+androidxAnnotation = "1.7.1" # Don't bump this until we can support higher Kotlin
 junit = "4.13.2"
 androidxTest = "1.7.0"
 dokka = "1.9.20"
@@ -37,7 +38,7 @@ androidx-work-testing = { module = "androidx.work:work-testing", version.ref = "
 
 [plugins]
 android-library = { id = "com.android.library", version.ref = "agp" }
-spotbugs = { id = "com.github.spotbugs-base", version.ref = "spotbugsPlugin" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+spotbugs = { id = "com.github.spotbugs", version.ref = "spotbugsPlugin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
